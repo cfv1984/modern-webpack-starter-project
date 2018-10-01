@@ -1,0 +1,10 @@
+{
+  "name": "modern-webpack-starter-project",
+  "version": "0.0.1",
+  "description": "A simple, modern, webpack starter project including hot reloading capabilities as well as SCSS and typescript support",
+  "main": "index.js",
+  "repository": "https://github.com/cfv1984/modern-webpack-starter-project",
+  "author": "Carlos Vergara <cfvergara@gmail.com>",
+  "license": "Apache-2.0",
+  "private": false
+}
