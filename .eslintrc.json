@@ -15,6 +15,13 @@
                 "allowTemplateLiterals":true
             }
         ],
-        "eol-last": ["error","always"]
+        "eol-last": ["error","always"],
+        "no-undef":"error",
+        "globals": {
+            "__dirname": "false",
+            "module": true,
+            "require": false,
+            "process": false
+        }
     }
 }

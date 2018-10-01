@@ -1,16 +1,16 @@
+/*eslint-disable*/ // ESLint gtfo of my config
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const IS_DEV               = process.env.NODE_ENV !== 'production' || [...process.argv].some(p => p.includes("mode=development"));
-const extensions           = [ '.tsx', '.ts', '.js' ,'css','scss' ];
+const IS_DEV               = process.env.NODE_ENV !== "production" || [...process.argv].some(p => p.includes("mode=development"));
+const extensions           = [ ".tsx", ".ts", ".js" ,"css","scss" ];
 const resolve              = { extensions };
-
 const devServer  = {
     contentBase: __dirname +"/dist",
     watchContentBase: true
 }; 
 
 const output = {
-    filename: '[name].js',
-    path: __dirname + '/dist'
+    filename: "[name].js",
+    path: __dirname + "/dist"
 };
 
 const plugins = [];
@@ -25,7 +25,7 @@ if(IS_DEV){
 const rules = [
     {
       test: /\.tsx?$/,
-      use: 'ts-loader',
+      use: "ts-loader",
       exclude: /node_modules/
     },
     {
@@ -33,7 +33,7 @@ const rules = [
         use: [
             MiniCssExtractPlugin.loader,
             {
-                loader: 'css-loader',
+                loader: "css-loader",
                 options: {
                     importLoaders: 2,
                     modules:true,
@@ -42,10 +42,10 @@ const rules = [
                 }
             },
             {
-                loader: 'sass-loader',
+                loader: "sass-loader",
                 options: {
                     sourceMap: true,
-                    outputStyle: 'compressed'
+                    outputStyle: "compressed"
                 }
             }
         ]
@@ -54,13 +54,15 @@ const rules = [
 
 module.exports = () => {
     return {
-        entry: { 'bundle': __dirname +'/src/js/index.js' },
+        entry: { "bundle": __dirname +"/src/js/index.js" },
         module: { rules: rules },
         devServer,
         resolve,
         output,
         plugins,
         minimize: !IS_DEV,
-        devtool: 'inline-source-map'
+        devtool: "inline-source-map"
       };
 };
+
+/* eslint-enable */
