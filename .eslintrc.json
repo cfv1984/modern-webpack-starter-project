@@ -1,0 +1,27 @@
+{
+    "extends": "eslint:recommended",
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "rules": {
+        "quotes": [
+            "error",
+            "double",
+            {
+                "allowTemplateLiterals":true
+            }
+        ],
+        "eol-last": ["error","always"],
+        "no-undef":"error",
+        "globals": {
+            "__dirname": "false",
+            "module": true,
+            "require": false,
+            "process": false
+        }
+    }
+}

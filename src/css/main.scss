@@ -1,0 +1,28 @@
+* {
+	box-sizing: border-box;
+}
+html,
+body {
+	width: 100%;
+	max-width: 120ex;
+	height: 100%;
+	margin: 0 auto;
+	font-family: sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+cite {
+	margin: 0;
+	padding: 0;
+	line-height: 1.5;
+}
+@import 'modules/variables';
+@import 'modules/mixins';
+@import 'modules/placeholders';
+@import 'modules/components';

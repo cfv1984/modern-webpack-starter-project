@@ -1,0 +1,11 @@
+@mixin clear($extend: true) {
+  @if $extend {
+    @extend %clear;
+  } @else {
+    &:after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+  }
+}
