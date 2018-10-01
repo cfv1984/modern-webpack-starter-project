@@ -1,11 +1,14 @@
 {
+    "extends": "tslint:recommended",
     "parserOptions": {
+        "ecmaVersion": 6,
         "sourceType": "module",
         "ecmaFeatures": {
             "jsx": true
         }
     },
-    "rules": {
-        "semi": 2
+    "rules":{
+        "quotemark":[true, "double","jsx-double"],
+        "eofline":true
     }
 }

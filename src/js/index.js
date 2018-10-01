@@ -1,4 +1,1 @@
-import * as styles from '../css/main.scss';
-
-
-console.log(styles);
+import "../css/main.scss"; // eslint-disable-line no-unused-vars

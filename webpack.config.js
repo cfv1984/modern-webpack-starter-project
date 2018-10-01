@@ -1,8 +1,7 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const IS_DEV = process.env.NODE_ENV !== 'production' || [...process.argv].some(p => p.includes("mode=development"));
-const path       = require('path');
-const extensions = [ '.tsx', '.ts', '.js' ,'css','scss' ];
-const resolve    = { extensions };
+const IS_DEV               = process.env.NODE_ENV !== 'production' || [...process.argv].some(p => p.includes("mode=development"));
+const extensions           = [ '.tsx', '.ts', '.js' ,'css','scss' ];
+const resolve              = { extensions };
 
 const devServer  = {
     contentBase: __dirname +"/dist",
@@ -55,15 +54,13 @@ const rules = [
 
 module.exports = () => {
     return {
-        entry: {
-            'bundle': __dirname +'/src/js/index.js'
-        },
-        module: {
-          rules: rules
-        },
+        entry: { 'bundle': __dirname +'/src/js/index.js' },
+        module: { rules: rules },
         devServer,
         resolve,
         output,
-        plugins
+        plugins,
+        minimize: !IS_DEV,
+        devtool: 'inline-source-map'
       };
 };
