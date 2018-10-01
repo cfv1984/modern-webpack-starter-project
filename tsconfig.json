@@ -6,9 +6,7 @@
         "target": "es5",
         "jsx": "react",
         "allowJs": true,
-        "paths": {
-
-        }
+        "rootDir": "./src/js"
     },
     "include": [
         "src/**/*"
