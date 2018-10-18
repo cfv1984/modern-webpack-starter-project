@@ -60,7 +60,9 @@ module.exports = () => {
         resolve,
         output,
         plugins,
-        minimize: !IS_DEV,
+        optimization:{
+            minimize: !IS_DEV,
+        },
         devtool: "inline-source-map"
       };
 };
