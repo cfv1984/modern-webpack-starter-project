@@ -1,7 +1,15 @@
-
-
 $breakpoints: (
-  'small':  767px,
-  'medium': 992px,
-  'large':  1200px
+	'small': 767px,
+	'medium': 992px,
+	'large': 1200px
 ) !default;
+
+$colors: (
+	bodyBg: #fff,
+	headerBg: #fff,
+	headerText: #222
+);
+
+$units: (
+	headerHeight: 75px
+);

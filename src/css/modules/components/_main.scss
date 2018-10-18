@@ -1,0 +1,25 @@
+body > main {
+	display: table-cell;
+	float: left;
+	@include width-in-cols(9);
+	margin-top: map-get($units, headerHeight);
+
+	img {
+		max-width: 100%;
+	}
+	h2 {
+		padding: 1ex 0;
+	}
+	section {
+		min-height: 100vh;
+		& > div p {
+			line-height: 1.25;
+		}
+		& > div p + p {
+			text-indent: 3ex;
+		}
+	}
+	section > header h3 {
+		padding-top: map-get($units, headerHeight);
+	}
+}

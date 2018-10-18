@@ -1,0 +1,21 @@
+body > aside {
+	display: table-cell;
+	float: left;
+	@include width-in-cols(3);
+	margin-top: map-get($units, headerHeight);
+	h2 {
+		padding: 1ex 0;
+	}
+	ul,
+	li {
+		margin: 0;
+		padding: 0;
+	}
+	li {
+		list-style-type: none;
+	}
+	a {
+		text-decoration: none;
+		line-height: 1.25;
+	}
+}

@@ -1,0 +1,33 @@
+body > header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	@include width-in-cols(12);
+	height: map-get($units, headerHeight);
+	background: map-get($colors, headerBg);
+	box-shadow: 0 0.1vh 0.1vh darken(map-get($colors, headerBg), 25%);
+
+	h1 {
+		float: left;
+		@include width-in-cols(3);
+		height: 100%;
+		a {
+			font-size: 0px;
+			color: transparent;
+			width: 100%;
+			height: calc(100% - 2vh);
+			display: block;
+			text-decoration: none;
+			background: transparent url('/img/avatar.jpg') no-repeat top left;
+			background-size: contain;
+			margin: 1vh;
+		}
+	}
+	p {
+		@include width-in-cols(9);
+		text-align: center;
+		font-size: 24pt;
+		color: map-get($colors, headerText);
+		line-height: 2.25;
+	}
+}

@@ -1,0 +1,4 @@
+@mixin width-in-cols($cols: 1) {
+	$colWidth: 100% /12;
+	width: $colWidth * $cols;
+}

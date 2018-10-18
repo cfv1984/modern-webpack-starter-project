@@ -1,0 +1,12 @@
+@mixin underline(
+	$width: 2px,
+	$color: currentColor,
+	$lineHeight: 0.85,
+	$bgColor: map-get($colors, bodyBg)
+) {
+	border-bottom: $width solid $color;
+	display: inline-block;
+	line-height: $lineHeight;
+	text-shadow: $width $width $bgColor, $width -1 * $width $bgColor,
+		-1 * $width $width $bgColor, -1 * $width -1 * $width $bgColor;
+}
