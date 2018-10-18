@@ -1,4 +1,6 @@
-# Modern webpack starter project
+![Amazing webpack starter project][1]
+
+# A frontend starter that does not suck that much
 
 Tired of alternatives I went on and built a simple webpack starter project that can be used to develop practically any frontend
 
@@ -12,3 +14,5 @@ Tired of alternatives I went on and built a simple webpack starter project that 
 
 * `yarn serve` will spawn a webpack-dev-server
 * `yarn build` will produce a packaged version of the app in the `/dist` directory
+
+[1]: docs/assets/work-smarter-webpack-banner.jpg
