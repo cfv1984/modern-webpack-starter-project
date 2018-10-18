@@ -1,6 +1,6 @@
 {
   "name": "modern-webpack-starter-project",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A simple, modern, webpack starter project including hot reloading capabilities as well as SCSS and typescript support",
   "main": "index.js",
   "repository": "https://github.com/cfv1984/modern-webpack-starter-project",
