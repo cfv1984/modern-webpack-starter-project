@@ -1,8 +1,14 @@
 /*eslint-disable*/ // ESLint gtfo of my config
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const IS_DEV =
-	process.env.NODE_ENV !== "production" ||
+	(process.env.NODE_ENV && process.env.NODE_ENV !== "production") ||
 	[...process.argv].some(p => p.includes("mode=development"));
+
+console.log(
+	process.env.NODE_ENV && process.env.NODE_ENV !== "production",
+	[...process.argv].some(p => p.includes("mode=development"))
+);
+
 const extensions = [".tsx", ".ts", ".js", "css", "scss"];
 const resolve = { extensions };
 const devServer = {
@@ -17,7 +23,7 @@ const output = {
 
 const plugins = [];
 
-if (IS_DEV) {
+if (!IS_DEV) {
 	plugins.push(
 		new MiniCssExtractPlugin({
 			filename: "[name].css",
@@ -57,7 +63,7 @@ const rules = [
 	{
 		test: /\.(css|sass|scss)$/,
 		use: [
-			MiniCssExtractPlugin.loader,
+			IS_DEV ? "style-loader" : MiniCssExtractPlugin.loader,
 			{
 				loader: "css-loader",
 				options: {
@@ -76,6 +82,8 @@ const rules = [
 	}
 ];
 
+console.log("IS_PROD", !IS_DEV);
+
 module.exports = () => {
 	return {
 		entry: { bundle: __dirname + "/src/js/index.js" },
@@ -87,7 +95,7 @@ module.exports = () => {
 		optimization: {
 			minimize: !IS_DEV
 		},
-		devtool: "inline-source-map"
+		devtool: IS_DEV ? "inline-source-map" : false
 	};
 };
 
